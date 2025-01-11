@@ -4,12 +4,13 @@
     session_start();
 
     $url = 'http://' .$_SERVER['HTTP_HOST'] /* . '/newct' */;
-    $sitename = 'OneCt';
+    $sitename = 'SimakovCT';
     $style = 'std';
     $antispam = 0;
     $lang = "ru";
     $links = array(
-        'Telegram' => 'https://t.me/openone_channel',
+        'Telegram (OneCt)' => 'https://t.me/openone_channel',
+        'Telegram (SimakovCT)' => 'https://t.me/SimakovTG'
         'Github' => 'https://github.com/OpenOneorg/onect',
         'API' => 'https://github.com/OpenOneorg/OneCT/wiki/API'
     );
@@ -24,7 +25,7 @@
     $db->exec("set names utf8mb4");
 
     if($db == false){
-        die('Ошибка подключение базы данных');
+        die('Ошибка подключения базы данных');
     }
 
     if(!isset($_SESSION['theme'])){
